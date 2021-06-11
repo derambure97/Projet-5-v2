@@ -53,13 +53,19 @@ document.getElementById ("order").addEventListener("submit",(e)=>{
    
    const regexNoms = /^[A-Za-zÀ-ÖØ-öø-ÿ]+$/;
    const regexEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-   const regexAddress =/^[A-Za-zÀ-ÖØ-öø-ÿ]+[0-9]/;
+   const regexAddress =/^[A-Za-zÀ-ÖØ-öø-ÿ0-9\s-]{1,}/;
 
    const isFirstNameOk = checkInput(firstNameElt.value, regexNoms);
    const isLastNameOk = checkInput(lastNameElt.value, regexNoms);
    const isCityOk = checkInput(cityElt.value, regexNoms);
    const isAddressOk = checkInput(addressElt.value, regexAddress);
    const isEmailOk = checkInput(emailElt.value, regexEmail);
+
+   // voir si toute les variables sont true ()
+   // si tous est true alors formaté la donner 
+   // puis envoyer formulaire avec le (fetch) 
+   // si pas bon envoyer (prompt) message erreur  
+
 });
 
 function checkInput(input, regex) {

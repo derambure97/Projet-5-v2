@@ -3,9 +3,15 @@ input[type=select] {
   }
 
   select{
-      background: white;
+   
+    background: white;
   }
   select option{
       background: white;
   }
 
+#vernisSelect{
+    border: none;
+    border-radius: 50px;
+
+}
