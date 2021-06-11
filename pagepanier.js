@@ -53,7 +53,7 @@ document.getElementById ("order").addEventListener("submit",(e)=>{
    
    const regexNoms = /^[A-Za-zÀ-ÖØ-öø-ÿ]+$/;
    const regexEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-   const regexaAddress =/^[A-Za-zÀ-ÖØ-öø-ÿ][0-9]+$/
+   const regexAddress =/^[A-Za-zÀ-ÖØ-öø-ÿ]+[0-9]/;
 
    const isFirstNameOk = checkInput(firstNameElt.value, regexNoms);
    const isLastNameOk = checkInput(lastNameElt.value, regexNoms);
