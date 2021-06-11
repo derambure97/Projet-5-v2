@@ -25,8 +25,10 @@ function generateProductPage(product){
               <div class="basBlock">
                   <h2 class="titreCard">${product.name} - ${formatPrice(product.price)}</h2>
                   <p class="texteCard">${product.description}</p>
-                  <div id="vernisSelector"></div>
-                  <button id="addToCartBtn">Ajouter au panier</button>
+                  <div class="selectEtBoutton">
+                      <div id="vernisSelector"></div>
+                      <div><button id="addToCartBtn">Ajouter au panier</button></div>
+                  </div>
                   
               </div>
           </div>

@@ -50,11 +50,16 @@ document.getElementById ("order").addEventListener("submit",(e)=>{
    let addressElt = document.getElementById ("address");
    let cityElt = document.getElementById ("city");
    let emailElt = document.getElementById ("email"); 
+   
    const regexNoms = /^[A-Za-zÀ-ÖØ-öø-ÿ]+$/;
+   const regexEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+   const regexaAddress =/^[A-Za-zÀ-ÖØ-öø-ÿ][0-9]+$/
 
    const isFirstNameOk = checkInput(firstNameElt.value, regexNoms);
    const isLastNameOk = checkInput(lastNameElt.value, regexNoms);
-   
+   const isCityOk = checkInput(cityElt.value, regexNoms);
+   const isAddressOk = checkInput(addressElt.value, regexAddress);
+   const isEmailOk = checkInput(emailElt.value, regexEmail);
 });
 
 function checkInput(input, regex) {
