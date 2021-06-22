@@ -61,6 +61,23 @@ document.getElementById ("order").addEventListener("submit",(e)=>{
    const isAddressOk = checkInput(addressElt.value, regexAddress);
    const isEmailOk = checkInput(emailElt.value, regexEmail);
 
+function checkInput(input, regex, error){
+  input.addEventListener("keyup", (event) => {
+    let test = regex.test(event.target.value)
+    if(!test){
+      document.getElementById(input.id + '-error').textContent = error;
+    }else{
+       document.getElementById(input.id + '-error').textContent = '';
+    }
+    return test
+  })
+}
+
+checkInput(firstNameElt, regexNoms, "Pas de chiffre, ni de symbole.");
+checkInput(lastNameElt, regexNoms, "Pas de chiffre, ni de symbole.");
+checkInput(addressElt, regexAddress, "Merci de bien vouloir indiqué votre adresse.");
+checkInput(cityElt, regexNoms, "Pas de chiffre, ni de symbole.");
+checkInput(emailElt, regexEmail, "Il faut écrire une adresse mail complète.");
    // voir si toute les variables sont true ()
    // si tous est true alors formaté la donner 
    // puis envoyer formulaire avec le (fetch) 

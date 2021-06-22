@@ -37,8 +37,6 @@
 .selectEtBoutton{
     display: flex;
     margin-top: 20px;
-    justify-content: space-between;
-    margin: 10 20 10 50;
     padding: 2px;
 }
 
@@ -50,4 +48,5 @@ button{
     background-color: white;
     width: 200px;
     height: 30px;
+    margin-left: 20px;
 }
