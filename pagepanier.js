@@ -1,18 +1,14 @@
 //on recupere le localstorage
-const cart = JSON.parse(localStorage.getItem("cart"));
-console.log(cart);
+const cartStorage = localStorage.getItem("cart");
+console.log("cartStorage",cartStorage);
+const cart = JSON.parse(cartStorage);
+console.log("cart", cart);
 //appeller api (localhost:3000)
 fetch("http://localhost:3000/api/furniture")
 .then(response => { return response.json()})
 .then(furnitures => {
-    console.log(furnitures)
-    const contentElt = document.getElementById('content');
- //on boucle sur les élément du panier localstorage
-    cart.forEach(element => {
-       let product = furnitures.find(furn => furn._id === element.id);
-       product.selectedVarnish = element.varnish
-       contentElt.innerHTML += generateProductBloc(product);
-    });
+    console.log("furnitures", furnitures);
+    generateContent(cart, furnitures)
  //il faut récupéré par rapport aux id présent dans le localstorage les élément nom descritpion prix et image de chaque produit du panier on obtien c'est infromation du produit dans furniture grace a son id
  //il faut mettre un boutton suprimer sur cahque produit (mettre a jour le localstorage par rapport au produit suprimé)
  
@@ -20,15 +16,17 @@ fetch("http://localhost:3000/api/furniture")
 .catch(error => {console.error(error)})
 
 
-function generateProductBloc(product){
+
+function generateProductBloc(product,index){
 
    let productBloc = `
      <div class="product col-12">
-       <div class="imageBlock">
+       <div class="imageBlock imageBlockPanier">
                 <img src="${product.imageUrl}"> 
                 <div class="basBlock">
                    <h2 class="titreCard">${product.name} - ${formatPrice(product.price)}</h2>
                    <p>Vernis: ${product.selectedVarnish}</p>
+                   <span class="delete-btn" data-index="${index}">x</span>
                </div>
            </div>
        </div>
@@ -87,5 +85,27 @@ checkInput(emailElt, regexEmail, "Il faut écrire une adresse mail complète.");
 
 function checkInput(input, regex) {
    return regex.test(input);
-};
+}
 
+function generateContent(products, furnitures) {
+   const contentElt = document.getElementById('content');
+   //on boucle sur les élément du panier localstorage
+      products.forEach((element,index) => {
+         console.log("index",index);
+         let product = furnitures.find(furn => furn._id === element.id);
+         product.selectedVarnish = element.varnish;
+         contentElt.innerHTML += generateProductBloc(product, index);
+      });
+      let deleteBtns = Array.from(document.querySelectorAll(".delete-btn"));
+  
+     deleteBtns.forEach( deleteBtn => {
+     deleteBtn.addEventListener('click', (e)=>{
+      alert(e.target.dataset.index);
+      products.splice(e.target.dataset.index, 1);
+      localStorage.setItem('cart', JSON.stringify(products))
+      contentElt.innerHTML = '';
+      generateContent(products, furnitures)
+    })
+  })
+   
+}

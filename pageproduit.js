@@ -14,6 +14,9 @@ fetch("http://localhost:3000/api/furniture/"+id) // j'appel l'url du serveur ave
     const contentElt = document.getElementById('content');
     contentElt.innerHTML += generateProductPage(product);
     generateSelect(product.varnish);
+    document.querySelector('#addToCartBtn').addEventListener('click', () => {
+      alert(`Le produit ${product.name} a ete ajoute au panier`);
+    })
 })
 .catch(error => {console.error(error)})
 
@@ -27,7 +30,7 @@ function generateProductPage(product){
                   <p class="texteCard">${product.description}</p>
                   <div class="selectEtBoutton">
                       <div id="vernisSelector"></div>
-                      <div><button id="addToCartBtn">Ajouter au panier</button></div>
+                      <div><button id="addToCartBtn">Ajouter au panier </button></div>
                   </div>
                   
               </div>
@@ -39,11 +42,13 @@ function generateProductPage(product){
 
 }
 
+
+
+
+
 function formatPrice(price){
     return  (price /100).toFixed(2) + '€'
 }
-
-
 
 function generateSelect(vernisArray){
 

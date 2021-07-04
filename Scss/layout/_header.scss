@@ -1,29 +1,42 @@
-header{
+header {
     display: flex;
     align-items: center;
-    width  : auto;
-    background : $colors-2;
-    .logo{
+    width: auto;
+    background: $colors-2;
+
+    .logo {
         width: 300px;
         margin-left: auto;
         margin-right: auto;
     }
-    .panier{
+
+    .panier {
         border: none;
         margin-right: 30px;
         width: 30px;
         height: 30px;
         background-image: url(./asset/shopping-basket-solid.svg);
         background-repeat: no-repeat;
-     
-           }
-        .panier:hover  {
-           
-            margin-right: 30px;
-            width: 30px;
-            height: 30px;
-             background-image: url(./asset/shopping-basket-solid-couleur.svg); 
-             transition: 0.1s;
-             border: none;
-           }
+
     }
+
+    .panier:hover {
+        background-image: url(./asset/shopping-basket-solid-couleur.svg);
+        transition: 0.1s;
+        border: none;
+    }
+}
+
+
+@media screen and (max-width: 500px){
+    header a.logo,  header img.logo  {
+        width: 200px;
+    }
+    header a.panier_link,  header .panier {
+        width: 25px;
+        height: 25px;
+    }
+    header{
+        padding: 0px 15px;
+    }
+}   
