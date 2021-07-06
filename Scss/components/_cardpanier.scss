@@ -1,7 +1,33 @@
 
-article {display:flex}
+.product{
+  padding:1%;
+  
+  img{
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      }
+
+}
 span {
-  background-color: red;
   padding: 10px;
   align-self: flex-start;
+  float: right;
+}
+.fa-times{
+  color: white;
+}
+
+.imageBlock.imageBlockPanier {
+  display: flex;
+  flex-direction: row;
+}
+
+#content.page2 {
+  display: flex;
+  flex-wrap: wrap;
+  width: 30%;
+  margin: auto;
+  margin-top: 10px;
+  padding-bottom: 10px;
 }

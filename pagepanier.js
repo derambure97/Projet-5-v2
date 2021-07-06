@@ -20,13 +20,14 @@ fetch("http://localhost:3000/api/furniture")
 function generateProductBloc(product,index){
 
    let productBloc = `
-     <div class="product col-12">
+     <div class="product">
        <div class="imageBlock imageBlockPanier">
                 <img src="${product.imageUrl}"> 
                 <div class="basBlock">
+                <span class="delete-btn" data-index="${index}"><i class="fas fa-times"></i></span>
                    <h2 class="titreCard">${product.name} - ${formatPrice(product.price)}</h2>
                    <p>Vernis: ${product.selectedVarnish}</p>
-                   <span class="delete-btn" data-index="${index}">x</span>
+                   
                </div>
            </div>
        </div>
