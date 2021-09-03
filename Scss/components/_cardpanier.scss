@@ -1,33 +1,90 @@
+#content.page3 .product {
+  padding: 1%;
+  width: 33%;
 
-.product{
-  padding:1%;
-  
-  img{
-      width: 100%;
-      height: 300px;
-      object-fit: cover;
-      }
+  img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+  }
 
 }
-span {
-  padding: 10px;
-  align-self: flex-start;
-  float: right;
+
+span.croix {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
 }
-.fa-times{
+
+.fa-times {
   color: white;
 }
 
-.imageBlock.imageBlockPanier {
+#content.page3 .imageBlock.imageBlockPanier {
   display: flex;
   flex-direction: row;
+
+  .basBlock {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: relative;
+    width: 60%;
+    .titreCard {
+      min-height: 0px;
+    }
+
+  }
+
+ 
+
 }
 
-#content.page2 {
+#content.page3 {
   display: flex;
   flex-wrap: wrap;
-  width: 30%;
+  width: 90%;
   margin: auto;
   margin-top: 10px;
   padding-bottom: 10px;
+  justify-content: space-between;
 }
+
+#content.page3 .texteVernis {
+  color: white;
+}
+
+#content.page3 .img_parent{
+ width: 40%;
+ height: 300px;
+}
+
+
+@media screen and (max-width: 1440px){
+
+
+}
+
+@media screen and (max-width: 1200px){
+  #content.page3 .product {
+    width: 50%;
+  }
+}
+  
+@media screen and (max-width: 900px){
+  #content.page3 .product {
+    width: 100%;
+  }
+}    
+  
+@media screen and (max-width: 500px){
+  
+  
+}    
+
+
+@media screen and (max-width: 400px){
+
+}   

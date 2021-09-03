@@ -21,15 +21,19 @@
     
     </header>
 
-    <div class="row page2" id="content"></div>  
-    
+    <div class="row page3" id="content"></div>  
+    <div class="row ligne"></div>  
+    <div class="boutonetprix">
+         <div class="prixGlobal"></div>
+         <button class="formule" >Videz le panier</button>
+    </div>
     <div><form id = "order">
-        <label for="firstName">Prénom:</label><input type="text" id="firstName" name="firstName"><span id="prenom-error"></span><br>
-        <label for="lastName">Nom:</label><input type="text" id="lastName" name="lastName"><span id="nom-error"></span><br>
-        <label for="address">Adresse:</label><input type="text" id="address" name="address"><span id="address-error"></span><br>
-        <label for="city">Ville:</label><input type="text" id="city" name="city"><span id="city-error"></span><br>
-        <label for="email">Mail:</label><input type="email" id="email" name="email"><span id="email-error"></span><br>
-        <input type= "submit" value = "Acheter">
+       <div class="prenom"><input required type="text" id="firstName" name="firstName" placeholder="Prénom"><span id="firstName-error"></span><br></div>
+       <div class="nom"><input required type="text" id="lastName" name="lastName" placeholder="Nom"><span id="lastName-error"></span><br></div>
+       <div class="adresse"><input required type="text" id="address" name="address" placeholder="Adresse"><span id="address-error"></span><br></div>
+       <div class="ville"><input required type="text" id="city" name="city" placeholder="Ville"><span id="city-error"></span><br></div>
+       <div class="mail"><input required type="email" id="email" name="email" placeholder="e-mail"><span id="email-error"></span><br></div>
+       <div class="boutonsubmit" > <input type= "submit" value = "Acheter"></div>
     </form></div>
     
     <footer>

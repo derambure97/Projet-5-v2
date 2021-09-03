@@ -1,18 +1,19 @@
 #content.page2 {
     display: flex;
-    width: 40%;
-    margin: auto;
+    width: 100%;
+    margin: 0 auto;
     margin-top: 10px;
     padding-bottom: 10px;
+    justify-content: center;
 
     #content:hover {
         box-shadow: 0px 0px 50px rgb(0 0 0 / 30%);
     }
 }
 
-.product {
+#content.page2 .product {
     padding: 1%;
-
+    width: 50%;
     img {
         width: 100%;
         height: 300px;
@@ -20,8 +21,11 @@
     }
 
 }
-
-.basblock {
+#content.page2 a{
+    height: 300px;
+    display: block;
+}
+#content.page2 .basblock {
     background-color: $colors-1;
     padding: 15px;
     margin-top: -3px;
@@ -39,14 +43,14 @@
     }
 }
 
-.selectEtBoutton {
+#content.page2 .selectEtBoutton {
     display: flex;
     margin-top: 20px;
     padding: 2px;
 }
 
 
-button {
+#content.page2 button {
     border-radius: 50px;
     border: 2px solid transparent;
     background-color: white;
@@ -56,7 +60,7 @@ button {
     cursor: pointer;
     transition: 0.3s;
 }
-button:hover{
+#content.page2 button:hover{
     border-color: white;
     background-color: $colors-1;
     color:white;
@@ -64,7 +68,7 @@ button:hover{
 }
 
 @media screen and (max-width: 1200px) {
-    #content.page2 {
+    #content.page2 .product {
         width: 60%;
 
     }
@@ -72,23 +76,23 @@ button:hover{
 }
 
 @media screen and (max-width: 900px) {
-    .product {
-        width: 100%;
+    #content.page2 .product {
+        width: 60%;
     }
 }
 
 @media screen and (max-width: 500px) {
-    #content.page2 {
-        width: 95%;
+    #content.page2 .product {
+        width: 90%;
 
     }
-    .selectEtBoutton {
+    #content.page2 .selectEtBoutton {
         display: flex;
         flex-direction: column;
         width: 100%;
     }
 
-    button {
+    #content.page2 button {
         width: 100%;
         margin-left: 0px;
     }

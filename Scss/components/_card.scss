@@ -1,4 +1,4 @@
-#content{
+    .index{
     display: flex;
     flex-wrap: wrap;
     width: 90%;
@@ -9,8 +9,9 @@
         box-shadow: 0px 0px 50px rgb(0 0 0 / 30%);
     }
 }
-.product{
+.index .product{
     padding:1%;
+    width: 33%;
     
     img{
         width: 100%;
@@ -19,11 +20,15 @@
         }
 
 }
+.index a{
+    height: 300px;
+    display: block;
+}
 
 .basBlock{
     background-color: $colors-1;
     padding: 15px;
-    margin-top: -3px;
+   
     .titreCard{
         min-height: 65px;
         color: white;
@@ -45,13 +50,13 @@
 }
     
 @media screen and (max-width: 900px){
-    .product {
+    .index .product {
       width: 50%;
     }
 }    
     
 @media screen and (max-width: 500px){
-    .product {
+    .index  .product {
         width: 100%;
         margin-bottom: 25px;
         
@@ -61,7 +66,5 @@
 
 
 @media screen and (max-width: 400px){
-    .product {
-        
-      }
+  
 }   

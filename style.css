@@ -62,13 +62,18 @@ table {
   font-weight: 400;
 }
 
+.texteVernis {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+}
+
 body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
-#content {
+.index {
   display: flex;
   flex-wrap: wrap;
   width: 90%;
@@ -76,23 +81,28 @@ body {
   margin-top: 10px;
   padding-bottom: 10px;
 }
-#content #content:hover {
+.index #content:hover {
   box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.3);
 }
 
-.product {
+.index .product {
   padding: 1%;
+  width: 33%;
 }
-.product img {
+.index .product img {
   width: 100%;
   height: 300px;
   object-fit: cover;
 }
 
+.index a {
+  height: 300px;
+  display: block;
+}
+
 .basBlock {
   background-color: #9356DC;
   padding: 15px;
-  margin-top: -3px;
 }
 .basBlock .titreCard {
   min-height: 65px;
@@ -112,59 +122,66 @@ body {
   }
 }
 @media screen and (max-width: 900px) {
-  .product {
+  .index .product {
     width: 50%;
   }
 }
 @media screen and (max-width: 500px) {
-  .product {
+  .index .product {
     width: 100%;
     margin-bottom: 25px;
   }
 }
 #content.page2 {
   display: flex;
-  width: 40%;
-  margin: auto;
+  width: 100%;
+  margin: 0 auto;
   margin-top: 10px;
   padding-bottom: 10px;
+  justify-content: center;
 }
 #content.page2 #content:hover {
   box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.3);
 }
 
-.product {
+#content.page2 .product {
   padding: 1%;
+  width: 50%;
 }
-.product img {
+#content.page2 .product img {
   width: 100%;
   height: 300px;
   object-fit: cover;
 }
 
-.basblock {
+#content.page2 a {
+  height: 300px;
+  display: block;
+}
+
+#content.page2 .basblock {
   background-color: #9356DC;
   padding: 15px;
   margin-top: -3px;
 }
-.basblock .titrecard {
+#content.page2 .basblock .titrecard {
   min-height: 65px;
   color: white;
   padding-bottom: 15px;
   font-weight: 700;
   font-size: 1.5em;
 }
-.basblock .textecard {
+#content.page2 .basblock .textecard {
   color: white;
 }
 
-.selectEtBoutton {
+#content.page2 .selectEtBoutton {
   display: flex;
   margin-top: 20px;
   padding: 2px;
 }
 
-button {
+#content.page2 button {
   border-radius: 50px;
   border: 2px solid transparent;
   background-color: white;
@@ -175,34 +192,34 @@ button {
   transition: 0.3s;
 }
 
-button:hover {
+#content.page2 button:hover {
   border-color: white;
   background-color: #9356DC;
   color: white;
 }
 
 @media screen and (max-width: 1200px) {
-  #content.page2 {
+  #content.page2 .product {
     width: 60%;
   }
 }
 @media screen and (max-width: 900px) {
-  .product {
-    width: 100%;
+  #content.page2 .product {
+    width: 60%;
   }
 }
 @media screen and (max-width: 500px) {
-  #content.page2 {
-    width: 95%;
+  #content.page2 .product {
+    width: 90%;
   }
 
-  .selectEtBoutton {
+  #content.page2 .selectEtBoutton {
     display: flex;
     flex-direction: column;
     width: 100%;
   }
 
-  button {
+  #content.page2 button {
     width: 100%;
     margin-left: 0px;
   }
@@ -212,39 +229,143 @@ button:hover {
     margin-bottom: 11px;
   }
 }
-.product {
+#content.page3 .product {
   padding: 1%;
+  width: 33%;
 }
-.product img {
+#content.page3 .product img {
   width: 100%;
   height: 300px;
   object-fit: cover;
 }
 
-span {
-  padding: 10px;
-  align-self: flex-start;
-  float: right;
+span.croix {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
 }
 
 .fa-times {
   color: white;
 }
 
-.imageBlock.imageBlockPanier {
+#content.page3 .imageBlock.imageBlockPanier {
   display: flex;
   flex-direction: row;
 }
+#content.page3 .imageBlock.imageBlockPanier .basBlock {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  position: relative;
+  width: 60%;
+}
+#content.page3 .imageBlock.imageBlockPanier .basBlock .titreCard {
+  min-height: 0px;
+}
 
-#content.page2 {
+#content.page3 {
   display: flex;
   flex-wrap: wrap;
-  width: 30%;
+  width: 90%;
   margin: auto;
   margin-top: 10px;
   padding-bottom: 10px;
+  justify-content: space-between;
 }
 
+#content.page3 .texteVernis {
+  color: white;
+}
+
+#content.page3 .img_parent {
+  width: 40%;
+  height: 300px;
+}
+
+@media screen and (max-width: 1200px) {
+  #content.page3 .product {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 900px) {
+  #content.page3 .product {
+    width: 100%;
+  }
+}
+.carreviolet {
+  display: flex;
+  flex-direction: column;
+  margin-top: 55px;
+  height: 500px;
+  width: 800px;
+  background-color: #9356DC;
+  border-radius: 30px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 55px;
+}
+
+.blockcarre {
+  text-align: center;
+  padding-top: 150px;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 1.5em;
+}
+
+.btncarre {
+  border-radius: 50px;
+  border: 2px solid transparent;
+  background-color: white;
+  width: 200px;
+  height: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 65px;
+}
+
+.btncarre:hover {
+  border-color: white;
+  background-color: #9356DC;
+  color: white;
+}
+
+@media screen and (max-width: 900px) {
+  .carreviolet {
+    height: 500px;
+    width: 600px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .carreviolet {
+    height: 300px;
+    width: 350px;
+  }
+
+  .btncarre {
+    margin-top: 30px;
+  }
+
+  .blockcarre {
+    padding-top: 40px;
+    font-size: 1.2em;
+  }
+}
+@media screen and (max-width: 400px) {
+  .carreviolet {
+    height: 275px;
+    width: 270px;
+  }
+
+  .blockcarre {
+    font-size: 0.9em;
+  }
+}
 input[type=select] {
   background-color: purple;
 }
@@ -265,6 +386,203 @@ select option {
   width: 150px;
 }
 
+form#order {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 50px;
+}
+
+.ligne {
+  height: 2px;
+  width: calc(88% + 4px);
+  margin: 0 auto;
+  background-color: #9356DC;
+  padding: 0px;
+}
+
+button.formule {
+  color: white;
+  border: 2px solid transparent;
+  background-color: #9356DC;
+  width: 200px;
+  border-radius: 50px;
+  height: 30px;
+  transition: 0.3s;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+
+button.formule:hover {
+  color: #9356DC;
+  border: 2px solid #9356DC;
+  background-color: white;
+}
+
+input#firstName {
+  border: none;
+  border-bottom: 1px solid #9356DC;
+  width: 300px;
+}
+
+input#lastName {
+  border: none;
+  border-bottom: 1px solid #9356DC;
+  width: 300px;
+}
+
+input#address {
+  border: none;
+  border-bottom: 1px solid #9356DC;
+  width: 300px;
+}
+
+input#city {
+  border: none;
+  border-bottom: 1px solid #9356DC;
+  width: 300px;
+}
+
+input#email {
+  border: none;
+  border-bottom: 1px solid #9356DC;
+  width: 300px;
+}
+
+.boutonetprix {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin: 10px 103px 0px 104px;
+}
+
+.prixGlobal {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+}
+
+.prenom {
+  padding-bottom: 20px;
+}
+
+.nom {
+  padding-bottom: 20px;
+}
+
+.adresse {
+  padding-bottom: 20px;
+}
+
+.ville {
+  padding-bottom: 20px;
+}
+
+.mail {
+  padding-bottom: 20px;
+}
+
+.mail {
+  padding-bottom: 20px;
+}
+
+.boutonsubmit input[type=submit] {
+  border-radius: 50px;
+  width: 200px;
+  height: 30px;
+  color: white;
+  background-color: #9356DC;
+  transition: 0.3s;
+  border: 2px solid transparent;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+
+.boutonsubmit input[type=submit]:hover {
+  color: #9356DC;
+  border: 2px solid #9356DC;
+  background-color: white;
+}
+
+span#firstName-error {
+  display: block;
+  color: red;
+  padding-top: 15px;
+}
+
+span#lastName-error {
+  display: block;
+  color: red;
+  padding-top: 15px;
+}
+
+span#address-error {
+  display: block;
+  color: red;
+  padding-top: 15px;
+}
+
+span#city-error {
+  display: block;
+  color: red;
+  padding-top: 15px;
+}
+
+span#email-error {
+  display: block;
+  color: red;
+  padding-top: 15px;
+}
+
+@media screen and (max-width: 1440px) {
+  .boutonetprix {
+    margin: 10px 84px 0px 84px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .boutonetprix {
+    margin: 10px 59px 0px 59px;
+  }
+}
+@media screen and (max-width: 900px) {
+  form#order {
+    padding-top: 50px;
+  }
+
+  .boutonetprix {
+    margin: 10px 45px 0px 44px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .basBlock .titreCard {
+    font-size: 1em;
+  }
+
+  .basBlock .texteCard {
+    font-size: 0.8em;
+  }
+
+  .basBlock .texteVernis {
+    font-size: 0.8em;
+  }
+
+  #content.page3 .img_parent {
+    width: 60%;
+  }
+
+  #content.page3 .imageBlock.imageBlockPanier .basBlock {
+    width: 40%;
+  }
+
+  .boutonetprix {
+    padding-top: 10px;
+    display: block;
+    margin: auto;
+  }
+
+  .prixGlobal {
+    margin: 10px 0px 18px 36px;
+  }
+}
 header {
   display: flex;
   align-items: center;

@@ -1,0 +1,91 @@
+.carreviolet {
+    display: flex;
+    flex-direction: column;
+    margin-top: 55px;
+    height: 500px;
+    width: 800px;
+    background-color: #9356DC;
+    border-radius: 30px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 55px;
+}
+
+.blockcarre {
+    text-align: center;
+    padding-top: 150px;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 1.5em;
+}
+
+.btncarre {
+        border-radius: 50px;
+        border: 2px solid transparent;
+        background-color: white;
+        width: 200px;
+        height: 30px;
+        margin-left: auto;
+        margin-right: auto;
+        cursor: pointer;
+        transition: 0.3s;
+        margin-top: 65px;
+    }
+    .btncarre:hover{
+        border-color: white;
+        background-color: $colors-1;
+        color:white;
+    
+    }
+
+
+
+
+
+
+@media screen and (max-width: 900px) {
+    .carreviolet {
+        height: 500px;
+        width: 600px;
+
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+
+    .carreviolet {
+        height: 300px;
+        width: 350px;
+
+    }
+    .btncarre{
+        margin-top: 30px;
+    }
+    
+    .blockcarre {
+
+        padding-top: 40px;
+        font-size: 1.2em;
+    }
+}
+
+
+
+
+
+@media screen and (max-width: 400px) {
+    .carreviolet {
+        height: 275px;
+        width: 270px;
+
+
+    }
+  
+    .blockcarre {
+     font-size: 0.9em;
+    }
+   
+
+}
